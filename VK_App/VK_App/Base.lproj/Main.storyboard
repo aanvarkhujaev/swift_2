@@ -151,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="1490" y="621"/>
         </scene>
-        <!--Login-->
+        <!--Tab Bar Controller-->
         <scene sceneID="w34-kY-hYR">
             <objects>
-                <tabBarController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="GVs-4s-ypx" customClass="Login" sceneMemberID="viewController">
+                <tabBarController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="GVs-4s-ypx" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wTn-Ya-l6c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -178,36 +178,74 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="63" id="qpv-tc-utn" customClass="FriendTableViewCell" customModule="VK_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="63"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="80" id="qpv-tc-utn" customClass="FriendTableViewCell" customModule="VK_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qpv-tc-utn" id="B4T-Z1-l8b">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qpv-tc-utn" id="B4T-Z1-l8b">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx5-dl-Hrl">
-                                            <rect key="frame" x="84" y="4" width="283" height="55"/>
+                                            <rect key="frame" x="104" y="-10" width="310" height="100"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zk3-wr-Cth">
-                                            <rect key="frame" x="16" y="9" width="44" height="44"/>
+                                        <view contentMode="scaleToFill" id="qwT-pU-Nxk" customClass="ViewWithShadow" customModule="VK_App" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="0.0" width="60" height="80"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zk3-wr-Cth" customClass="RoundedImageView" customModule="VK_App" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="10" width="60" height="60"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="9vE-wE-rqB"/>
-                                                <constraint firstAttribute="width" constant="44" id="e9S-ta-Z5I"/>
+                                                <constraint firstItem="Zk3-wr-Cth" firstAttribute="top" secondItem="qwT-pU-Nxk" secondAttribute="top" constant="10" id="5FS-cI-Axg"/>
+                                                <constraint firstItem="Zk3-wr-Cth" firstAttribute="leading" secondItem="qwT-pU-Nxk" secondAttribute="leading" id="T8i-ne-W0E"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zk3-wr-Cth" secondAttribute="trailing" id="Z07-HZ-Q5O"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zk3-wr-Cth" secondAttribute="bottom" constant="10" id="kz6-5M-4fM"/>
                                             </constraints>
-                                        </imageView>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Dx5-dl-Hrl" secondAttribute="trailing" constant="16" id="1NL-jx-uHO"/>
-                                        <constraint firstAttribute="bottom" secondItem="Zk3-wr-Cth" secondAttribute="bottom" constant="10" id="2v7-JI-06y"/>
-                                        <constraint firstItem="Zk3-wr-Cth" firstAttribute="top" secondItem="B4T-Z1-l8b" secondAttribute="top" constant="9" id="5Cz-Qr-FYa"/>
-                                        <constraint firstItem="Dx5-dl-Hrl" firstAttribute="top" secondItem="B4T-Z1-l8b" secondAttribute="top" constant="4" id="HnF-bM-eog"/>
-                                        <constraint firstAttribute="bottom" secondItem="Dx5-dl-Hrl" secondAttribute="bottom" constant="4" id="TAU-cC-ruA"/>
-                                        <constraint firstItem="Dx5-dl-Hrl" firstAttribute="leading" secondItem="Zk3-wr-Cth" secondAttribute="trailing" constant="24" id="fic-1C-uQE"/>
-                                        <constraint firstItem="Zk3-wr-Cth" firstAttribute="leading" secondItem="B4T-Z1-l8b" secondAttribute="leading" constant="16" id="hnN-hG-vZL"/>
+                                        <constraint firstAttribute="top" secondItem="Dx5-dl-Hrl" secondAttribute="top" constant="10" id="4S0-ls-BGQ"/>
+                                        <constraint firstItem="Dx5-dl-Hrl" firstAttribute="bottom" secondItem="B4T-Z1-l8b" secondAttribute="bottom" constant="10" id="6JZ-um-eap"/>
+                                        <constraint firstItem="Dx5-dl-Hrl" firstAttribute="leading" secondItem="qwT-pU-Nxk" secondAttribute="trailing" constant="24" id="VsG-Cx-aqb"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dx5-dl-Hrl" secondAttribute="trailing" id="WZU-C5-ckA"/>
+                                        <constraint firstItem="qwT-pU-Nxk" firstAttribute="centerY" secondItem="Dx5-dl-Hrl" secondAttribute="centerY" id="c6c-qm-Zfo"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" systemColor="labelColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="2" height="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="photoImageView" destination="Zk3-wr-Cth" id="IZL-63-TS4"/>
@@ -228,52 +266,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uy4-VX-HR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="SqR-am-LPG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="629" y="-802"/>
+            <point key="canvasLocation" x="628.98550724637687" y="-802.23214285714278"/>
         </scene>
         <!--Friends-->
         <scene sceneID="wxE-oP-Xcu">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="CoP-z4-FFU" customClass="FriendsTableViewController" customModule="VK_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lim-9V-G6s">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lim-9V-G6s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="63" id="P0h-ye-L4E" customClass="FriendTableViewCell" customModule="VK_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="63"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="80" id="syy-eh-4mb" customClass="FriendTableViewCell" customModule="VK_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P0h-ye-L4E" id="aKJ-x3-DFc">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="syy-eh-4mb" id="fPN-KB-kJG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSZ-Sw-sb5">
-                                            <rect key="frame" x="84" y="4" width="283" height="55"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMZ-if-KIv">
+                                            <rect key="frame" x="104" y="-10" width="310" height="100"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wMT-7j-Vb7">
-                                            <rect key="frame" x="16" y="9" width="44" height="44"/>
+                                        <view contentMode="scaleToFill" id="3aH-kH-Yi1" customClass="ViewWithShadow" customModule="VK_App" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="0.0" width="60" height="80"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bSW-Nw-uVQ" customClass="RoundedImageView" customModule="VK_App" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="10" width="60" height="60"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="44" id="ToC-m4-vrx"/>
-                                                <constraint firstAttribute="height" constant="44" id="XoF-rG-wN2"/>
+                                                <constraint firstAttribute="bottom" secondItem="bSW-Nw-uVQ" secondAttribute="bottom" constant="10" id="BUd-sf-Mqj"/>
+                                                <constraint firstItem="bSW-Nw-uVQ" firstAttribute="leading" secondItem="3aH-kH-Yi1" secondAttribute="leading" id="Yyw-rT-sf3"/>
+                                                <constraint firstAttribute="trailing" secondItem="bSW-Nw-uVQ" secondAttribute="trailing" id="ZgY-Zv-RR4"/>
+                                                <constraint firstItem="bSW-Nw-uVQ" firstAttribute="top" secondItem="3aH-kH-Yi1" secondAttribute="top" constant="10" id="tQQ-K5-RQR"/>
                                             </constraints>
-                                        </imageView>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="wMT-7j-Vb7" firstAttribute="top" secondItem="aKJ-x3-DFc" secondAttribute="top" constant="9" id="49a-qe-VJf"/>
-                                        <constraint firstItem="XSZ-Sw-sb5" firstAttribute="top" secondItem="aKJ-x3-DFc" secondAttribute="top" constant="4" id="5Ac-wC-GAu"/>
-                                        <constraint firstAttribute="bottom" secondItem="XSZ-Sw-sb5" secondAttribute="bottom" constant="4" id="QdD-bA-g09"/>
-                                        <constraint firstAttribute="trailing" secondItem="XSZ-Sw-sb5" secondAttribute="trailing" constant="16" id="S4A-vp-f8o"/>
-                                        <constraint firstItem="XSZ-Sw-sb5" firstAttribute="leading" secondItem="wMT-7j-Vb7" secondAttribute="trailing" constant="24" id="VWK-VH-Exy"/>
-                                        <constraint firstAttribute="bottom" secondItem="wMT-7j-Vb7" secondAttribute="bottom" constant="10" id="tTh-IN-HiA"/>
-                                        <constraint firstItem="wMT-7j-Vb7" firstAttribute="leading" secondItem="aKJ-x3-DFc" secondAttribute="leading" constant="16" id="xqi-yE-xgZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="jMZ-if-KIv" secondAttribute="trailing" id="8P7-Uz-faN"/>
+                                        <constraint firstItem="jMZ-if-KIv" firstAttribute="bottom" secondItem="fPN-KB-kJG" secondAttribute="bottom" constant="10" id="Jmz-h7-kqm"/>
+                                        <constraint firstItem="jMZ-if-KIv" firstAttribute="leading" secondItem="3aH-kH-Yi1" secondAttribute="trailing" constant="24" id="Yho-CF-ufi"/>
+                                        <constraint firstItem="3aH-kH-Yi1" firstAttribute="centerY" secondItem="jMZ-if-KIv" secondAttribute="centerY" id="mq4-TQ-XlM"/>
+                                        <constraint firstAttribute="top" secondItem="jMZ-if-KIv" secondAttribute="top" constant="10" id="yFi-hC-ZBW"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" systemColor="labelColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="2" height="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="photoImageView" destination="wMT-7j-Vb7" id="DAZ-YM-1Jj"/>
-                                    <outlet property="titleLabel" destination="XSZ-Sw-sb5" id="sdE-QE-hs6"/>
-                                    <segue destination="crg-7U-qBz" kind="show" identifier="" id="buc-2U-nec"/>
+                                    <outlet property="photoImageView" destination="bSW-Nw-uVQ" id="fWK-la-9DY"/>
+                                    <outlet property="titleLabel" destination="jMZ-if-KIv" id="nqC-3e-3Zh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -292,15 +367,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="crg-7U-qBz" kind="show" identifier="toPhoto" id="SrI-cH-7iK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOY-4q-BXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="628.98550724637687" y="-135.26785714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Photos View Controller-->
         <scene sceneID="wrx-kh-nyI">
             <objects>
-                <viewController id="crg-7U-qBz" sceneMemberID="viewController">
+                <viewController id="crg-7U-qBz" customClass="PhotosViewController" customModule="VK_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qer-7W-dxT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,54 +387,46 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zFE-7O-9QL">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="130" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="cdD-EY-Opj">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="cdD-EY-Opj" customClass="PhotosCollectionViewCell" customModule="VK_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Z8z-9v-QKq">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="willsmith1" translatesAutoresizingMaskIntoConstraints="NO" id="Lkl-Ep-MNi">
-                                                    <rect key="frame" x="8" y="8" width="112" height="112"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="willsmith1" translatesAutoresizingMaskIntoConstraints="NO" id="Lkl-Ep-MNi">
+                                                    <rect key="frame" x="8" y="8" width="114" height="109"/>
                                                 </imageView>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="128" height="128"/>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qc3-c4-ElP">
-                                        <rect key="frame" x="143" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CjV-yv-gAD">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="willsmith2" translatesAutoresizingMaskIntoConstraints="NO" id="KfI-6N-t83">
-                                                    <rect key="frame" x="8" y="8" width="112" height="112"/>
+                                                <view contentMode="scaleToFill" id="ujp-re-1VM" customClass="LikeButton" customModule="VK_App" customModuleProvider="target">
+                                                    <rect key="frame" x="43" y="121" width="44" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="likesCount">
+                                                            <integer key="value" value="69"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="likeImage" value="like"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Lkl-Ep-MNi" secondAttribute="trailing" constant="8" id="2ed-4A-LB6"/>
+                                                <constraint firstItem="Lkl-Ep-MNi" firstAttribute="leading" secondItem="Z8z-9v-QKq" secondAttribute="leading" constant="8" id="2jB-gf-7Te"/>
+                                                <constraint firstItem="Lkl-Ep-MNi" firstAttribute="top" secondItem="Z8z-9v-QKq" secondAttribute="top" constant="8" id="aNg-fA-5Tn"/>
+                                                <constraint firstItem="ujp-re-1VM" firstAttribute="top" secondItem="Lkl-Ep-MNi" secondAttribute="bottom" constant="4" id="kKf-Pg-EdP"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GK0-OH-dI1">
-                                        <rect key="frame" x="286" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uQb-sV-gTy">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="willsmith3" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-xe-UNU">
-                                                    <rect key="frame" x="8" y="8" width="112" height="112"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="130" height="150"/>
+                                        <connections>
+                                            <outlet property="photoImage" destination="Lkl-Ep-MNi" id="eQV-DK-DCY"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -378,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hfc-5T-aRe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="-135"/>
+            <point key="canvasLocation" x="1489.8550724637682" y="-135.26785714285714"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="bap-Ac-ZvW">
@@ -402,6 +472,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" id="pvv-9W-474" customClass="LikeButton" customModule="VK_App" customModuleProvider="target">
+                                            <rect key="frame" x="72" y="72" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="likesCount">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="likeImage" value="like"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="willsmith1" translatesAutoresizingMaskIntoConstraints="NO" id="kZW-tZ-jKG">
                                             <rect key="frame" x="8" y="8" width="112" height="112"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -447,7 +528,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5i-5y-UxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="-802"/>
+            <point key="canvasLocation" x="1489.8550724637682" y="-802.23214285714278"/>
         </scene>
         <!--Friends-->
         <scene sceneID="Kmy-eA-ETv">
@@ -490,10 +571,14 @@
     </scenes>
     <resources>
         <image name="VK_Compact_Logo" width="512" height="512"/>
-        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="like" width="32" height="32"/>
+        <image name="person" catalog="system" width="32" height="32"/>
         <image name="willsmith1" width="470.5" height="698.5"/>
         <image name="willsmith2" width="250" height="250"/>
         <image name="willsmith3" width="1500" height="1141.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -502,6 +587,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

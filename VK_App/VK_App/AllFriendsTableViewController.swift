@@ -9,22 +9,38 @@ import UIKit
 
 
     
-struct friend: Equatable {
+struct Friend: Equatable {
     var name: String
     var image: UIImage
+    var photos: [UIImage]
 }
 
 class AllFriendsTableViewController: UITableViewController {
 
     var friends = [
-        friend(name: "Azamat Sharipov", image: #imageLiteral(resourceName: "willsmith1")),
-        friend(name: "Nurmukhammad Mukhtorov", image: #imageLiteral(resourceName: "dimabilan1")),
-        friend(name: "Jasur Abdujabborov", image: #imageLiteral(resourceName: "vandam2")),
-        friend(name: "Kamila Sobirova", image: #imageLiteral(resourceName: "galgadot1")),
-        friend(name: "Khojiakbar Abdurasulov", image: #imageLiteral(resourceName: "bradpitt3"))
+        Friend(name: "Azamat Sharipov", image: #imageLiteral(resourceName: "willsmith1"),
+               photos: [
+                #imageLiteral(resourceName: "willsmith1"),#imageLiteral(resourceName: "willsmith3"),#imageLiteral(resourceName: "willsmith2")
+               ]),
+        Friend(name: "Nurmukhammad Mukhtorov", image: #imageLiteral(resourceName: "dimabilan1"),
+               photos: [
+                #imageLiteral(resourceName: "dimabilan3"),#imageLiteral(resourceName: "dimabilan2"),#imageLiteral(resourceName: "dimabilan1")
+               ]),
+        Friend(name: "Jasur Abdujabborov", image: #imageLiteral(resourceName: "vandam2"),
+               photos: [
+                #imageLiteral(resourceName: "vandam2"),#imageLiteral(resourceName: "vandam3"),#imageLiteral(resourceName: "vandam1")
+               ]),
+        Friend(name: "Kamila Sobirova", image: #imageLiteral(resourceName: "galgadot1"),
+               photos: [
+                #imageLiteral(resourceName: "galgadot1"),#imageLiteral(resourceName: "galgadot3"),#imageLiteral(resourceName: "galgadot2")
+               ]),
+        Friend(name: "Khojiakbar Abdurasulov", image: #imageLiteral(resourceName: "bradpitt3"),
+               photos: [
+                #imageLiteral(resourceName: "bradpitt3"),#imageLiteral(resourceName: "bradpitt2"),#imageLiteral(resourceName: "bradpitt1")
+               ])
     ]
     
-    var selectedFriend: friend?
+    var selectedFriend: Friend?
     
     override func viewDidLoad() {
         super.viewDidLoad()
