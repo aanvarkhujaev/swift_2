@@ -36,6 +36,5 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.photoImage.image = photos[indexPath.item]
         return cell
     }
-    
-
 }
+

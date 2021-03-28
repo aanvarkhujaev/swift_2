@@ -42,9 +42,9 @@ import UIKit
         likeImageView = UIImageView()
         likeImageView.contentMode = .scaleAspectFit
         countLabel.textAlignment = .left
-        stackView = UIStackView (arrangedSubviews: [countLabel, likeImageView])
+        stackView = UIStackView (arrangedSubviews: [likeImageView, countLabel])
         addSubview(stackView)
-        stackView.spacing = 0
+        stackView.spacing = 8
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.distribution = .fill
@@ -57,7 +57,7 @@ import UIKit
     }
     
     private func updateSelectionState() {
-        let color = isSelected ? tintColor : .black
+        let color = isSelected ? tintColor : .systemGray2
         countLabel.textColor = color
         likeImageView.tintColor = color
         updateLabelText()

@@ -40,10 +40,25 @@ class AllFriendsTableViewController: UITableViewController {
                ])
     ]
     
-    var selectedFriend: Friend?
+    var friendsName = [
+        "Azamat Sharipov",
+        "Nurmukhammad Mukhtorov",
+        "Jasur Abdujabborov",
+        "Kamila Sobirova",
+        "Khojiakbar Abdurasulov"
+    ]
     
+    var filteredFriends = [Friend]()
+    var selectedFriend: Friend?
+    private var cellReuseIdentifer = "FriendCell"
+    private let searchBar = UISearchBar()
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "FriendTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifer)
+        searchBar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44)
+        searchBar.delegate = self
+        tableView.tableHeaderView = searchBar
+        filtedSearchFriends()
 
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,12 +66,12 @@ class AllFriendsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.count
+        return filteredFriends.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FriendTableViewCell
-        let friend = friends[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifer, for: indexPath) as! FriendTableViewCell
+        let friend = filteredFriends[indexPath.row]
         cell.titleLabel.text = friend.name
         cell.photoImageView.image = friend.image
         return cell
@@ -64,7 +79,25 @@ class AllFriendsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedFriend = friends[indexPath.row]
+        selectedFriend = filteredFriends[indexPath.row]
         performSegue(withIdentifier: "addFriend", sender: self)
+    }
+    func filtedSearchFriends() {
+        let searchText = (searchBar.text ?? "").lowercased()
+        if searchText.isEmpty {
+            filteredFriends = friends
+        } else {
+            filteredFriends = friends.filter{ friend -> Bool in
+                friend.name.lowercased().contains(searchText)
+            }
+        }
+        tableView.reloadData()
+    }
+}
+
+extension AllFriendsTableViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filtedSearchFriends()
     }
 }

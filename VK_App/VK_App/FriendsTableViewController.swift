@@ -10,8 +10,13 @@ import UIKit
 class FriendsTableViewController: UITableViewController {
     var friends = [Friend] ()
     var selectedFriend: Friend?
+    private var cellReuseIdentifer = "FriendCell"
+    private var headerReuseIdentifer = "FriendHeader"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "FriendTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifer)
+        tableView.register(UINib(nibName: "FriendTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: headerReuseIdentifer)
 
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,9 +28,10 @@ class FriendsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FriendTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifer, for: indexPath) as! FriendTableViewCell
         let friend = friends[indexPath.row]
         cell.titleLabel.text = friend.name
+        cell.showDisclosureArrow = true
         cell.photoImageView.image = friend.image
         return cell
     }
@@ -64,4 +70,12 @@ class FriendsTableViewController: UITableViewController {
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerReuseIdentifer) as! FriendTableViewHeader
+        header.configure(text: "List friends")
+        return header
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
 }
