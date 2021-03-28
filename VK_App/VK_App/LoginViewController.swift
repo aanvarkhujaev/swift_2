@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  VK_App
 //
 //  Created by Akbar on 2/27/21.
@@ -10,7 +10,8 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-        
+    
+    @IBOutlet weak var search: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         
