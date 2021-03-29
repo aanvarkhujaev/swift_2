@@ -19,6 +19,7 @@ class FriendsTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "FriendTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: headerReuseIdentifer)
 
     }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

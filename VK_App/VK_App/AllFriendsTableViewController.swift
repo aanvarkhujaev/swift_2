@@ -40,14 +40,6 @@ class AllFriendsTableViewController: UITableViewController {
                ])
     ]
     
-    var friendsName = [
-        "Azamat Sharipov",
-        "Nurmukhammad Mukhtorov",
-        "Jasur Abdujabborov",
-        "Kamila Sobirova",
-        "Khojiakbar Abdurasulov"
-    ]
-    
     var filteredFriends = [Friend]()
     var selectedFriend: Friend?
     private var cellReuseIdentifer = "FriendCell"

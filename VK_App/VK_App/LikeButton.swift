@@ -7,7 +7,6 @@
 
 import UIKit
 @IBDesignable class LikeButton: UIControl {
-    
     @IBInspectable var likesCount: Int = 0 {
         didSet {
             updateLabelText()
@@ -54,6 +53,7 @@ import UIKit
     private func updateLabelText() {
         let additionLikes = isSelected ? 1 : 0
         countLabel.text = "\(likesCount + additionLikes)"
+        
     }
     
     private func updateSelectionState() {
@@ -65,6 +65,11 @@ import UIKit
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         isSelected = !isSelected
         updateSelectionState()
+        UIView.transition(with: self, duration: 1, options: [.transitionCrossDissolve]) {
+            self.updateSelectionState()
+        } completion: { success in
+            
+        }
+
     }
-    
 }
