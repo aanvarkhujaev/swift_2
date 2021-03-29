@@ -24,4 +24,5 @@ class FriendTableViewCell: UITableViewCell {
         super.prepareForReuse()
         showDisclosureArrow = false
     }
+    
 }

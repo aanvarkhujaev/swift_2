@@ -14,6 +14,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var search: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginField.alpha = 0
+        passwordField.alpha = 0
+        UIView.animate(withDuration: 2, delay: 1, options: []) {
+            self.loginField.alpha = 1
+            self.passwordField.alpha = 1
+        } completion: { success in
+            
+        }
+
         
     }
     

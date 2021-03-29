@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="VK_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="VK_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -83,6 +83,14 @@
                             <constraint firstItem="TFQ-9J-T7K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GD0-Jb-4SF"/>
                             <constraint firstItem="TFQ-9J-T7K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tgl-k7-jz7"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="colorStart">
+                                <color key="value" red="0.38039215686274508" green="0.56470588235294117" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="colorEnd">
+                                <color key="value" red="0.65911483764648438" green="0.74560666084289551" blue="0.92500263452529907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="loginField" destination="UnC-aA-U09" id="3uz-MT-trE"/>
