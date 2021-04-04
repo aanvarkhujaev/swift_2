@@ -10,7 +10,7 @@ import UIKit
 class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var photos = [UIImage]()
-    
+    var selectedIndex = 0
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -35,6 +35,18 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PhotosCollectionViewCell
         cell.photoImage.image = photos[indexPath.item]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndex = indexPath.item
+        self.performSegue(withIdentifier: "toDetail", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail",
+           let destination = segue.destination as? BrowsingPhotosViewController {
+            destination.selectedIndex = selectedIndex
+            destination.photos = photos
+        }
     }
 }
 
