@@ -23,6 +23,7 @@
 		54D962912600C15C00F137C8 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D962902600C15C00F137C8 /* LikeButton.swift */; };
 		54D962942600F56500F137C8 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D962932600F56500F137C8 /* PhotosViewController.swift */; };
 		54D962972600F7FB00F137C8 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D962962600F7FB00F137C8 /* PhotosCollectionViewCell.swift */; };
+		54DADA6B261586C2006CF2E4 /* BrowsingPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DADA6A261586C2006CF2E4 /* BrowsingPhotosViewController.swift */; };
 		54FB452725EA3DBF008D3127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB452625EA3DBF008D3127 /* AppDelegate.swift */; };
 		54FB452925EA3DBF008D3127 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB452825EA3DBF008D3127 /* SceneDelegate.swift */; };
 		54FB452B25EA3DBF008D3127 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB452A25EA3DBF008D3127 /* LoginViewController.swift */; };
@@ -48,6 +49,7 @@
 		54D962902600C15C00F137C8 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		54D962932600F56500F137C8 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		54D962962600F7FB00F137C8 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		54DADA6A261586C2006CF2E4 /* BrowsingPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsingPhotosViewController.swift; sourceTree = "<group>"; };
 		54FB452325EA3DBF008D3127 /* VK_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FB452625EA3DBF008D3127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FB452825EA3DBF008D3127 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				540F3B7C260BC79B00FF7158 /* PinterestLayout.swift */,
 				540F3B6B260A1D6C00FF7158 /* FriendTableViewHeader.xib */,
 				54FB452C25EA3DBF008D3127 /* Main.storyboard */,
+				54DADA6A261586C2006CF2E4 /* BrowsingPhotosViewController.swift */,
 				540E4947260CB04E00C289C2 /* NewsPostTableViewController.swift */,
 				54FB452F25EA3DC2008D3127 /* Assets.xcassets */,
 				54FB453125EA3DC2008D3127 /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 				54CD206125F8E4570042FAD5 /* AllFriendsTableViewController.swift in Sources */,
 				54D962972600F7FB00F137C8 /* PhotosCollectionViewCell.swift in Sources */,
 				54D9628A26009EC000F137C8 /* ViewWithShadow.swift in Sources */,
+				54DADA6B261586C2006CF2E4 /* BrowsingPhotosViewController.swift in Sources */,
 				54CD205B25F8D3AE0042FAD5 /* FriendsTableViewController.swift in Sources */,
 				54FB452925EA3DBF008D3127 /* SceneDelegate.swift in Sources */,
 				540F3B7D260BC79B00FF7158 /* PinterestLayout.swift in Sources */,
