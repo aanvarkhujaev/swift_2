@@ -14,6 +14,8 @@
 		540F3B6C260A1D6C00FF7158 /* FriendTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540F3B6B260A1D6C00FF7158 /* FriendTableViewHeader.xib */; };
 		540F3B73260A34D700FF7158 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F3B72260A34D700FF7158 /* GradientView.swift */; };
 		540F3B7D260BC79B00FF7158 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F3B7C260BC79B00FF7158 /* PinterestLayout.swift */; };
+		54117C35262770960009D4BA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54117C34262770960009D4BA /* Session.swift */; };
+		54117C59262B5A710009D4BA /* VkAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54117C58262B5A710009D4BA /* VkAuthViewController.swift */; };
 		5424D4EB2609EAC700EC0A34 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5424D4E92609EAC700EC0A34 /* FriendTableViewCell.swift */; };
 		5424D4EC2609EAC700EC0A34 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5424D4EA2609EAC700EC0A34 /* FriendTableViewCell.xib */; };
 		54CD205B25F8D3AE0042FAD5 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD205A25F8D3AE0042FAD5 /* FriendsTableViewController.swift */; };
@@ -40,6 +42,8 @@
 		540F3B6B260A1D6C00FF7158 /* FriendTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewHeader.xib; sourceTree = "<group>"; };
 		540F3B72260A34D700FF7158 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		540F3B7C260BC79B00FF7158 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		54117C34262770960009D4BA /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		54117C58262B5A710009D4BA /* VkAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkAuthViewController.swift; sourceTree = "<group>"; };
 		5424D4E92609EAC700EC0A34 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		5424D4EA2609EAC700EC0A34 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
 		54CD205A25F8D3AE0042FAD5 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +113,9 @@
 				540F3B7C260BC79B00FF7158 /* PinterestLayout.swift */,
 				540F3B6B260A1D6C00FF7158 /* FriendTableViewHeader.xib */,
 				54FB452C25EA3DBF008D3127 /* Main.storyboard */,
+				54117C58262B5A710009D4BA /* VkAuthViewController.swift */,
 				54DADA6A261586C2006CF2E4 /* BrowsingPhotosViewController.swift */,
+				54117C34262770960009D4BA /* Session.swift */,
 				540E4947260CB04E00C289C2 /* NewsPostTableViewController.swift */,
 				54FB452F25EA3DC2008D3127 /* Assets.xcassets */,
 				54FB453125EA3DC2008D3127 /* LaunchScreen.storyboard */,
@@ -199,6 +205,7 @@
 				5424D4EB2609EAC700EC0A34 /* FriendTableViewCell.swift in Sources */,
 				540E4944260CAC1000C289C2 /* NewsPostCellViewCell.swift in Sources */,
 				54CD206125F8E4570042FAD5 /* AllFriendsTableViewController.swift in Sources */,
+				54117C35262770960009D4BA /* Session.swift in Sources */,
 				54D962972600F7FB00F137C8 /* PhotosCollectionViewCell.swift in Sources */,
 				54D9628A26009EC000F137C8 /* ViewWithShadow.swift in Sources */,
 				54DADA6B261586C2006CF2E4 /* BrowsingPhotosViewController.swift in Sources */,
@@ -208,6 +215,7 @@
 				540F3B73260A34D700FF7158 /* GradientView.swift in Sources */,
 				54D9628726009B3700F137C8 /* RoundedImageView.swift in Sources */,
 				54D962942600F56500F137C8 /* PhotosViewController.swift in Sources */,
+				54117C59262B5A710009D4BA /* VkAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
